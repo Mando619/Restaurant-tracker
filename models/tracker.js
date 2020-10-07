@@ -1,18 +1,15 @@
 module.exports = function(sequelize, DataTypes) {
     var Tracker = sequelize.define("tracker", {
-      title: {
+      restuarant: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-          len: [1]
+          len: [140]
         }
       },
-      body: {
-        type: DataTypes.TEXT,
-        allowNull: false,
-        validate: {
-          len: [1]
-        }
+      rating: {
+        type: DataTypes.INT,
+        allowNull: false
       },
       category: {
         type: DataTypes.STRING,
