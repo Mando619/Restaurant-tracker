@@ -13,6 +13,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^5.1.0",
+    "method-override": "^2.3.7",
+    "omdb": "^0.8.0",
     "mysql2": "^2.2.5",
     "sequelize": "^6.3.5"
   },

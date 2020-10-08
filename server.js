@@ -12,8 +12,9 @@ app.use(express.json());
 app.engine('handlebars', expressHandlebars({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
-require('./controllers/view-routes')(app);
+require('./controllers/restaurant_controller.js')(app);
 require('./controllers/api-routes')(app);
+
 
 app.listen(PORT, function() {
     console.log('listening on port ' + PORT);
