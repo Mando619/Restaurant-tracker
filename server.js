@@ -30,10 +30,13 @@ var settings = {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "tripadvisor1.p.rapidapi.com",
-		"x-rapidapi-key": "513419ea98msh86e5703b3981c88p11aeaajsn43e1ea91d50c"
+		"x-rapidapi-key": "513419ea98msh86e5703b3981c88p11aeaajsn43e1ea91d50c",
+		"useQueryString": true
 	}
 }
 
-$.ajax(settings).done(function (response) {
-	console.log(response);
-});
+
+// $.ajax(settings).done(function (response) {
+// 	console.log(response);
+// });
+
