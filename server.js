@@ -22,3 +22,21 @@ require('./controllers/api-routes')(app);
 app.listen(PORT, function() {
     console.log('listening on port ' + PORT);
 });
+
+var settings = {
+	"async": true,
+	"crossDomain": true,
+	"url": "https://tripadvisor1.p.rapidapi.com/restaurants/list?restaurant_tagcategory_standalone=10591&lunit=km&restaurant_tagcategory=10591&limit=30&currency=USD&lang=en_US&location_id=293919",
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "tripadvisor1.p.rapidapi.com",
+		"x-rapidapi-key": "513419ea98msh86e5703b3981c88p11aeaajsn43e1ea91d50c",
+		"useQueryString": true
+	}
+}
+
+
+// $.ajax(settings).done(function (response) {
+// 	console.log(response);
+// });
+
