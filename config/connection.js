@@ -8,7 +8,7 @@ if (process.env.JAWSDS_URL) {
     host: "localhost",
   port: 8889,
   user: "root",
-  password: "root",
+  password: "arm575",
   database: "restaurant_db"
   });
 }
