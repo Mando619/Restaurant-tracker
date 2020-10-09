@@ -11,8 +11,7 @@ router.post ('api/restaurant', function (req, res) {
             var restaurantId = JSON.parse(body).restaurantId;
             console.log(restaurantId);
             
-            var price: 
-
+            
 
     }
 })
