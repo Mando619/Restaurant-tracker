@@ -9,11 +9,12 @@ var db = require('../models');
 module.exports = function (app) {
     
     router.get('/', function(request, response) {
-        
-        response.render('index', {});
+        db.Restaurants.findAll ({
+            order: 'name'
+        }) .then (function(data) {
+            var rtobjet = {
+             restaurant: data
+            };
+            response.render('index', rtobjet);
     });
-
-};
-
-
-router.post
+    })}
