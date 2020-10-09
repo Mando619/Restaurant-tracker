@@ -9,10 +9,6 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INT,
       allowNull: false
     },
-    rating: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
     categories: {
       type: DataTypes.STRING,
       allowNull
