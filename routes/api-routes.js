@@ -16,4 +16,5 @@ router.post ('api/restaurant', function (req, res) {
     }
 })
     
-};
+});
+}
