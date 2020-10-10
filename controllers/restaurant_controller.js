@@ -12,11 +12,11 @@ module.exports = function (app) {
         db.Restaurants.findAll ({
             order: 'name'
         }) .then (function(data) {
-            var rtobjet = {
+            var restObject = {
              restaurant: data
             };
-            response.render('index', rtobjet);
+            response.render('main', restObject);
     });
-    })}
+})}
 
     
