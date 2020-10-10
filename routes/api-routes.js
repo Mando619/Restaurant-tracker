@@ -25,6 +25,7 @@ module.exports = function (app) {
 
                 };
 
+<<<<<<< HEAD:controllers/api-routes.js
                 request (options, function (error,response,result){
                     if (error) res.redirect('/');
                     if (!JSON.parse(result).results) {
@@ -51,3 +52,10 @@ module.exports = function (app) {
     });
     });
 }
+=======
+    }
+})
+    
+});
+}
+>>>>>>> 0d0a3e02a497f3a19fdf26a3b45fe5f0755a1f61:routes/api-routes.js
