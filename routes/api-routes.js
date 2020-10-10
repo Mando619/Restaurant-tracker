@@ -3,7 +3,7 @@ const db = require("../models");
 module.exports = function (app) {
 
 
-    router.post ('api/restaurant', function (req, res) {
+    app.post ('api/restaurant', function (req, res) {
         var cityName = req.body.name;
         var queryUrl = 'https://api.yelp.com/v3/businesses/HI1chBajXbwmKvT2XKSFT5xcV9Kn_51fg69kB9k-qZ6oPWmdfyp02IzZc684aPhzoxZpW5ZmhDdx-h7L31FppPH4cyzL15ms2NOkRlGJDMnBJRcMNqxnze0grw9-X3Yx' + cityName;
         request (queryUrl, function (error, response, body) {
@@ -25,7 +25,7 @@ module.exports = function (app) {
 
                 };
 
-                request (options, function (error,response,result){
+                app.request (options, function (error,response,result){
                     if (error) res.redirect('/');
                     if (!JSON.parse(result).results) {
                         // res.send('SOMETHING WENT WRONG');

@@ -1,12 +1,12 @@
-const express = require('express');
-const expressHandlebars = require('express-handlebars');
+var express = require('express');
+var expressHandlebars = require('express-handlebars');
 
-var cors = require('cors')
+//	var cors = require('cors')
 
-const app = express();
-const PORT = process.env.PORT || 8080;
-
-app.use(cors())
+var app = express();
+var PORT = process.env.PORT || 8080;
+var db = require("./models");
+//	app.use(cors())
 
 app.use(express.static("public"));
 
@@ -17,7 +17,7 @@ app.engine('handlebars', expressHandlebars({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
 require('./controllers/restaurant_controller.js')(app);
-require('./controllers/api-routes')(app);
+require('./routes/api-routes')(app);
 
 db.sequelize.sync({ force: true }).then(function() {
 	app.listen(PORT, function() {

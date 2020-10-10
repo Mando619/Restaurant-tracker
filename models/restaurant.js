@@ -1,27 +1,30 @@
-var sequelize = require('sequelize'); 
 
 module.exports = function(sequelize, DataTypes) {
   var Restaurant = sequelize.define("Restaurant", 
   { 
     name: {
       type: DataTypes.STRING,
-      autoIncrement: true,
-      primaryKey: true,
       allowNull: false
     },
     price: {
-      type: DataTypes.INT,
+      type: DataTypes.INTEGER,
       allowNull: false
     },
     categories: {
       type: DataTypes.STRING,
-      allowNull
+      allowNull: false
     }, 
     location: {
-      type: DataTypes.String,
+      type: DataTypes.STRING,
       allowNull: false
-    }
-
+    },
   });
+
+  Restaurant.associate = function(models) {
+    Restaurant.hasMany(models.Profiles, {
+      allowKnull: false
+    });
+  };
+
   return Restaurant;
 };
