@@ -1,12 +1,12 @@
 const express = require('express');
 const expressHandlebars = require('express-handlebars');
 
-var cors = require('cors')
+// var cors = require('cors')
 
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 
-app.use(cors())
+// app.use(cors())
 
 app.use(express.static("public"));
 
@@ -16,27 +16,18 @@ app.use(express.json());
 app.engine('handlebars', expressHandlebars({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
+var indexRouter = require('./routes/index');
+app.use('/', indexRouter);
+
 require('./controllers/restaurant_controller.js')(app);
-require('./controllers/api-routes')(app);
+// require('./controllers/api.js')(app);
 
-db.sequelize.sync({ force: true }).then(function() {
-	app.listen(PORT, function() {
-	  console.log("App listening on PORT " + PORT);
-	});
-  });
+// db.sequelize.sync({ force: true }).then(function() {
+	// app.listen(PORT, function() {
+	//   console.log("App listening on PORT " + PORT);
+	// });
+//   });
   
-var settings = {
-	"async": true,
-	"crossDomain": true,
-	"url": "https://tripadvisor1.p.rapidapi.com/restaurants/list?restaurant_tagcategory_standalone=10591&lunit=km&restaurant_tagcategory=10591&limit=30&currency=USD&lang=en_US&location_id=293919",
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "tripadvisor1.p.rapidapi.com",
-		"x-rapidapi-key": "513419ea98msh86e5703b3981c88p11aeaajsn43e1ea91d50c",
-		"useQueryString": true
-	}
-}
-
 
 // $.ajax(settings).done(function (response) {
 // 	console.log(response);
