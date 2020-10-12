@@ -10,7 +10,7 @@ module.exports = function (app) {
     
     router.get('/', function(request, response) {
         db.Restaurants.findAll ({
-            order: 'name'
+            order: 'name',
         }) .then (function(data) {
             var restObject = {
              restaurant: data
