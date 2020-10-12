@@ -1,46 +1,30 @@
-var express = require('express');
-var expressHandlebars = require('express-handlebars');
+// *********************************************************************************
+// Server.js - This file is the initial starting point for the Node/Express server.
+// *********************************************************************************
 
-//	var cors = require('cors')
+// Dependencies
+// =============================================================
+var express = require("express");
 
+// Sets up the Express App
+// =============================================================
 var app = express();
 var PORT = process.env.PORT || 8080;
-var db = require("./models");
-//	app.use(cors())
 
-app.use(express.static("public"));
-
+// Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.engine('handlebars', expressHandlebars({ defaultLayout: 'main' }));
-app.set('view engine', 'handlebars');
+// Static directory
+app.use(express.static("app/public"));
 
-require('./controllers/restaurant_controller.js')(app);
-require('./routes/api-routes')(app);
-require('./routes/html-routes.js')(app);
+// Routes
+// =============================================================
+require("./app/routes/api-routes.js")(app);
+require("./app/routes/html-routes.js")(app);
 
-
-db.sequelize.sync({ force: true }).then(function() {
-	app.listen(PORT, function() {
-	  console.log("App listening on PORT " + PORT);
-	});
-  });
-  
-var settings = {
-	"async": true,
-	"crossDomain": true,
-	"url": "https://tripadvisor1.p.rapidapi.com/restaurants/list?restaurant_tagcategory_standalone=10591&lunit=km&restaurant_tagcategory=10591&limit=30&currency=USD&lang=en_US&location_id=293919",
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "tripadvisor1.p.rapidapi.com",
-		"x-rapidapi-key": "513419ea98msh86e5703b3981c88p11aeaajsn43e1ea91d50c",
-		"useQueryString": true
-	}
-}
-
-
-// $.ajax(settings).done(function (response) {
-// 	console.log(response);
-// });
-
+// Starts the server to begin listening
+// =============================================================
+app.listen(PORT, function() {
+  console.log("App listening on PORT " + PORT);
+});
