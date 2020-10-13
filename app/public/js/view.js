@@ -4,7 +4,7 @@ $("#search-btn").on("click", function(event) {
 
 
 
-  // Save the book they typed into the restaurant-search input
+  // Save the restaurant they typed into the restaurant-search input
   var cityName = $("#restaurant-search").val().trim();
 
   var settings = {
@@ -13,21 +13,11 @@ $("#search-btn").on("click", function(event) {
     "timeout": 0,
   };
   
-  $.ajax(settings).done(function (response) {
+  $.ajax(settings).done(function (response) { 
     console.log(response.restaurants);
     renderRestaurants(response.restaurants);
   });
 
-
-
-  // // Make an AJAX get request to our api, including the user's book in the url
-  // $.get("/api/" + restaurantSearched, function(data) {
-
-  //   console.log(data);
-  //   // Call our renderBooks function to add our books to the page
-  //   renderBooks(data);
-
-  // });
 
 });
 
@@ -54,48 +44,11 @@ $("#hello").on("click", function(event) {
       console.log(data);
     });
 
-  // // Empty each input box by replacing the value with an empty string
-  // $("#title").val("");
-  // $("#author").val("");
-  // $("#genre").val("");
-  // $("#pages").val("");
+ 
 
 });
 
-// // When user hits the author-search-btn
-// $("#author-search-btn").on("click", function() {
 
-//   // Save the author they typed into the author-search input
-//   var authorSearched = $("#author-search").val().trim();
-
-//   // Make an AJAX get request to our api, including the user's author in the url
-//   $.get("/api/author/" + authorSearched, function(data) {
-
-//     // Log the data to the console
-//     console.log(data);
-//     // Call our renderBooks function to add our books to the page
-//     renderBooks(data);
-
-//   });
-
-// });
-
-// // When user hits the genre-search-btn
-// $("#genre-search-btn").on("click", function() {
-
-//   // Save the book they typed into the genre-search input
-//   var genreSearched = $("#genre-search").val().trim();
-
-//   // Make an AJAX get request to our api, including the user's genre in the url
-//   $.get("/api/genre/" + genreSearched, function(data) {
-
-//     console.log(data);
-//     // Call our renderBooks function to add our books to the page
-//     renderBooks(data);
-
-//   });
-
-// });
 
 function renderRestaurants(data) {
 
@@ -106,8 +59,14 @@ function renderRestaurants(data) {
     // $("#stats").show();
 
   for (var i = 0; i < data.length; i++) {
-    $("#restaurantList").append('<h4>' + data[i].name + '</h4>');
+    $("#restaurantList").append('<button class="restaurantButton" id="' + data[i].name + '" >' + data[i].name + '</button>');
+    //$("#restaurantList").append('<h4>' + data[i].address + '</h4>');
+    //$("#restaurantList").append('<h4>' + data[i].phone + '</h4>');
+    //$("#restaurantList").append('<h4>' + data[i].price + '</h4>');
+    
   }
+
+  
 
 
 
