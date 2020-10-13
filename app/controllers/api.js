@@ -105,11 +105,11 @@ module.exports = function(app) {
     });
   });
 
-  // Delete a book
-  app.delete("/api/book/:id", function(req, res) {
-    console.log("Book ID:");
+  // Delete a review
+  app.delete("/api/rating/:id", function(req, res) {
+    console.log("restaurant ID:");
     console.log(req.params.id);
-    Book.destroy({
+    Rating.destroy({
       where: {
         id: req.params.id
       }
