@@ -78,7 +78,7 @@ module.exports = function(app) {
   // });
 
   // Add a rating
-  app.post("/api/new", function(req, res) {
+  app.post("/api/add", function(req, res) {
     console.log("Restaurant Data:");
     console.log(req.body);
     Rating.create({
