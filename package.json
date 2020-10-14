@@ -1,7 +1,7 @@
 {
   "name": "sequelize-library",
   "version": "1.0.0",
-  "description": "",
+  "description": "You can review all your experiences in restaurants",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -17,6 +17,15 @@
     "handlebars": "^4.7.6",
     "mysql": "^2.18.1",
     "mysql2": "^1.7.0",
-    "sequelize": "^4.44.4"
-  }
+    "sequelize": "^5.8.6"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mando619/Restaurant-tracker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mando619/Restaurant-tracker/issues"
+  },
+  "homepage": "https://github.com/Mando619/Restaurant-tracker#readme"
 }
