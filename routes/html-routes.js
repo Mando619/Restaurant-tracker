@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+  
+>>>>>>> c2db639d2086bc48e1222a7ffd2315d520c3bf26
 var path = require("path");
 
 // Routes

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+  
+>>>>>>> c2db639d2086bc48e1222a7ffd2315d520c3bf26
 var express = require('express');
 var expressHandlebars = require('express-handlebars');
 
@@ -16,6 +20,7 @@ app.use(express.json());
 app.engine('handlebars', expressHandlebars({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
+<<<<<<< HEAD
 require('./controllers/restaurant_controller.js')(app);
 require('./routes/api-routes')(app);
 require('./routes/html-routes.js')(app);
@@ -44,3 +49,16 @@ var settings = {
 // 	console.log(response);
 // });
 
+=======
+//require('./controllers/restaurant_controller.js')(app);
+require('./routes/api-routes')(app);
+require('./routes/html-routes.js')(app);
+
+
+db.sequelize.sync({ force: true }).then(function() {
+	app.listen(PORT, function() {
+	  console.log("App listening on PORT " + PORT);
+	});
+  });
+  
+>>>>>>> c2db639d2086bc48e1222a7ffd2315d520c3bf26
