@@ -28,4 +28,34 @@ $.get("/api/all", function(data) {
   //   $("#book-well-" + i).append("<h3>Genre: " + data[i].genre + "</h4>");
   //   $("#book-well-" + i).append("<h3>Pages: " + data[i].pages + "</h4>");
   // }
+
+
+      // var div = $("<div>");
+
+      // div.append("<h2>" + data[i].name + "</h2>");
+      // div.append("<p>Author: " + data[i].author + "</p>");
+      // div.append("<p>Genre: " + data[i].genre + "</p>");
+      // div.append("<p>Pages: " + data[i].pages + "</p>");
+      // div.append("<button class='delete' data-id='" + data[i].id + "'>DELETE BOOK</button>");
+
+      // $("#stats").append(div);
+
+  // }
+
+    // $(".delete").click(function() {
+
+    //   $.ajax({
+    //     method: "DELETE",
+    //     url: "/api/book/" + $(this).attr("data-id")
+    //   })
+    //     // On success, run the following code
+    //     .then(function() {
+    //       console.log("Deleted Successfully!");
+    //     });
+
+    //   $(this).closest("div").remove();
+
+    // });
+
+ // }
 });
