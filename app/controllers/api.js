@@ -77,15 +77,27 @@ module.exports = function(app) {
   //   });
   // });
 
-  // Add a rating
+  // // Add a rating
+  // app.post("/api/add", function(req, res) {
+  //   console.log("Restaurant Data:");
+  //   console.log(req.body);
+  //   Rating.create({
+  //     username: req.body.username,
+  //     restaurant_name: req.body.restaurant_name,
+  //     rating: req.body.rating,
+  //     // pages: req.body.pages
+  //   }).then(function(results) {
+  //     res.json(results);
+  //   });
+  // });
   app.post("/api/add", function(req, res) {
-    console.log("Restaurant Data:");
+    console.log(req)
+    console.log("Rating Data:");
     console.log(req.body);
     Rating.create({
       username: req.body.username,
       restaurant_name: req.body.restaurant_name,
       rating: req.body.rating,
-      // pages: req.body.pages
     }).then(function(results) {
       res.json(results);
     });
