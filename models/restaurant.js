@@ -1,5 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
   var Restaurant = sequelize.define("Restaurant", {
+    
     price: {
       type: DataTypes.DECIMAL,
       allowNull: false

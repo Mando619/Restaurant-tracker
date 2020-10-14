@@ -1,29 +1,28 @@
 {
-  "name": "sequelize-library",
+  "name": "restaurant-tracker",
   "version": "1.0.0",
-  "description": "You can review all your experiences in restaurants",
+  "description": "https://mdbootstrap.com/docs/jquery/forms/contact/#html --- form credits --- ZB",
   "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "watch": "nodemon server.js"
+  "directories": {
+    "test": "tests"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^5.1.0",
-    "handlebars": "^4.7.6",
-    "mysql": "^2.18.1",
     "mysql2": "^1.7.0",
     "sequelize": "^5.8.6"
   },
   "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Mando619/Restaurant-tracker.git"
   },
+  "author": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/Mando619/Restaurant-tracker/issues"
   },

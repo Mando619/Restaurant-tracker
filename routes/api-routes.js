@@ -4,14 +4,19 @@
 
 // Dependencies
 // =============================================================
-var Rating = require("../models/restaurant.js");
+//var Rating = require("../models/restaurant.js");
 
 // Routes
 // =============================================================
+
+var db = require("../models");
+
+
+
 module.exports = function(app) {
   // Get all books
   app.get("/api/all", function(req, res) {
-    Rating.findAll({}).then(function(results) {
+    db.Rating.findAll({}).then(function(results) {
       res.json(results);
     });
   });
@@ -81,7 +86,7 @@ module.exports = function(app) {
   app.post("/api/new", function(req, res) {
     console.log("Restaurant Data:");
     console.log(req.body);
-    Rating.create({
+    db.Rating.create({
       username: req.body.username,
       restaurant_name: req.body.restaurant_name,
       rating: req.body.rating,
@@ -96,7 +101,7 @@ module.exports = function(app) {
     console.log(req)
     console.log("Rating Data:");
     console.log(req.body);
-    Rating.create({
+    db.Rating.create({
       username: req.body.username,
       restaurant_name: req.body.restaurant_name,
       rating: req.body.rating,
@@ -109,7 +114,7 @@ module.exports = function(app) {
   app.delete("/api/book/:id", function(req, res) {
     console.log("Book ID:");
     console.log(req.params.id);
-    Book.destroy({
+    db.Book.destroy({
       where: {
         id: req.params.id
       }

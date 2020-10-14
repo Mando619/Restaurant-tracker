@@ -1,4 +1,3 @@
-  
 var path = require("path");
 
 // Routes
@@ -33,6 +32,6 @@ app.get("/profiles", function(request, response) {
 });
 
 app.get("/", function(request, response) {
-  response.sendFile(path.join(__dirname, "../public/restaurant.html"));
+  response.sendFile(path.join(__dirname, "../public/view.html"));
 });
 };
