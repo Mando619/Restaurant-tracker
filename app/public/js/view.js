@@ -57,10 +57,11 @@ function renderRestaurants(data) {
     // $("#stats").show();
 
   for (var i = 0; i < data.length; i++) {
-    $("#restaurantList").append('<button class="restaurantButton" id="' + data[i].name + '" >' + data[i].name + '</button>');
-    $("#restaurantList").append('<h4>' + data[i].address + '</h4>');
-    $("#restaurantList").append('<h4>' + data[i].phone + '</h4>');
-    $("#restaurantList").append('<h4>' + data[i].price + '</h4>');
+    $("#restaurantList").append('<div class="cards">' + '<button class="restaurantButton" id="' + data[i].name + '" >' + data[i].name + '</button>' + '<h4>' + data[i].address + '</h4>' + '<h4>' + data[i].phone + '</h4>' + '<h4>' + data[i].price + '</h4>' + '</div>');
+    // $("#restaurantList").append('<button class="restaurantButton" id="' + data[i].name + '" >' + data[i].name + '</button>');
+    // $("#restaurantList").append('<h4>' + data[i].address + '</h4>');
+    // $("#restaurantList").append('<h4>' + data[i].phone + '</h4>');
+    // $("#restaurantList").append('<h4>' + data[i].price + '</h4>');
     
   }
 
