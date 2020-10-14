@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Restaurant Tracker</title>
+    <style>
+        body {
+            background-image: url('https://pixy.org/src/6/thumbs350/60494.jpg');
+        }
+
+        .checked {
+            color: orange;
+        }
+
+        button {
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark center">
+        <ul class="nav">
+            <li class="nav-item ">
+                <a class="nav-link active text-light" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="#">Restaurants</a>
+            </li>
+        </ul>
+        <ul class="nav">
+            <li class="nav-item align-right">
+                <a class="nav-link text-danger" href="#">Support</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="row py-4">
+        <h1 class="display-2 col-12 text-center text-danger"></h1>
+    </div>
+    <div class="row py-4">
+
+    </div>
+    <div class="jumbotron text-center bg-dark text-light">
+        <h1 class="display-4">Welcome!</h1>
+        <p class="lead">Always having a hard time choosing where to eat? Let us help! Here is an app that allows you to
+            rate restaurant you've already been too, look for new places to go, and compare your ratings to your
+            friends.</p>
+        <hr class="my-4">
+        <p class="">Friends cant all decide on the same restaurant?!? Let us decide for you! We will filter through you
+            and your friends profile to find a place to make everyone happy!</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Let's Get Started</a>
+    </div>
+
+    <div class="row pb-4 mx-4 float-left text-center">
+        <div col-3>
+            <div class="card" style="width: 18rem;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQlM4GRSZAaqN2wwCDT-kwqsMK4sQmU9QzX9g&usqp=CAU"
+                    class="card-img-top" alt="Picture-of-restaurant">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Location</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Price</li>
+                    <li class="list-group-item">Categories</li>
+                    <li class="list-group-item">
+                        <div class="container star-rating">
+                            <button id="rating-1" class="fa fa-star checked" data-rating="1"></button>
+                            <button id="rating-2" class="fa fa-star checked" data-rating="2"></button>
+                            <button id="rating-3" class="fa fa-star checked" data-rating="3"></button>
+                            <button id="rating-4" class="fa fa-star checked" data-rating="4"></button>
+                            <button id="rating-5" class="fa fa-star checked" data-rating="5"></button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="row pb-4 mx-4 float-left text-center">
+        <div col-3>
+            <div class="card" style="width: 18rem;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQlM4GRSZAaqN2wwCDT-kwqsMK4sQmU9QzX9g&usqp=CAU"
+                    class="card-img-top" alt="Picture-of-restaurant">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Location</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Price</li>
+                    <li class="list-group-item">Categories</li>
+                    <li class="list-group-item">
+                        <div class="container star-rating">
+                            <button id="rating-1" class="fa fa-star checked" data-rating="1"></button>
+                            <button id="rating-2" class="fa fa-star checked" data-rating="2"></button>
+                            <button id="rating-3" class="fa fa-star checked" data-rating="3"></button>
+                            <button id="rating-4" class="fa fa-star checked" data-rating="4"></button>
+                            <button id="rating-5" class="fa fa-star checked" data-rating="5"></button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row pb-4 mx-4 float-left text-center">
+        <div col-3>
+            <div class="card" style="width: 18rem;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQlM4GRSZAaqN2wwCDT-kwqsMK4sQmU9QzX9g&usqp=CAU"
+                    class="card-img-top" alt="Picture-of-restaurant">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Location</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Price</li>
+                    <li class="list-group-item">Categories</li>
+                    <li class="list-group-item">
+                        <div class="container star-rating">
+                            <button id="rating-1" class="fa fa-star checked" data-rating="1"></button>
+                            <button id="rating-2" class="fa fa-star checked" data-rating="2"></button>
+                            <button id="rating-3" class="fa fa-star checked" data-rating="3"></button>
+                            <button id="rating-4" class="fa fa-star checked" data-rating="4"></button>
+                            <button id="rating-5" class="fa fa-star checked" data-rating="5"></button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+
+</html>
