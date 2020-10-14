@@ -6,9 +6,9 @@ $("#add-btn").on("click", function(event) {
 console.log("hello");
   // Make a newReview object
   var newRat = {
-    username: $("#usernameInput").val().trim(),
-    restaurant_name: $("#restaurantNameInput").val().trim(),
-    rating: $("#ratingInput").val().trim(),
+    username: $("#usernameAdd").val().trim(),
+    restaurant_name: $("#restaurantNameAdd").val().trim(),
+    rating: $("#ratingAdd").val().trim(),
   };
 
   // Send an AJAX POST-request with jQuery
@@ -25,9 +25,9 @@ console.log("hello");
 
 
 //   // Empty each input box by replacing the value with an empty string
-//   $("#username").val("");
-//   $("#restaurant_name").val("");
-//   $("#rating").val("");
-//   // $("#pages").val("");
+  $("#usernameAdd").val("");
+  $("#restaurantNameAdd").val("");
+  $("#ratingAdd").val("");
+  // $("#pages").val("");
 
 });

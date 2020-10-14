@@ -8,8 +8,9 @@ $.get("/api/all", function(data) {
 
     $("#ratingsList").append('<h4>' + data[i].username + '</h4>');
     $("#ratingsList").append('<h4>' + data[i].restaurant_name + '</h4>');
-    $("#ratingsList").append('<h4>' + data[i].rating + '</h4>');
+    $("#ratingsList").append('<h4>' + data[i].rating + '</h4>' + '<button>' + "DELETE" + '</button>');
     $("#ratingsList").append('<h4>---------------------------------</h4>');
+
   }
   // For each book that our server sends us back
   // for (var i = 0; i < data.length; i++) {
