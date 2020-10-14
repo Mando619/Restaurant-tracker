@@ -1,7 +1,8 @@
-const restaurant = require("./restaurant");
+
 
 module.exports = function(sequelize, DataTypes) {
-    var Profiles = sequelize.define("Profiles", {
+    var Profiles = sequelize.define("Profiles", 
+    {
       first_name: {
         type: DataTypes.STRING,
         allowNull: false
@@ -10,8 +11,11 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.STRING,
         allowNull: false
       },
+    },
+    {
+      timestamp: false,
     });
-
+ 
     Profiles.associate = function(models) {
       Profiles.belongsTo(models.Restaurant, {
         foreignKey: {

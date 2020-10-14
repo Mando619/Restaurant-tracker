@@ -9,14 +9,14 @@ var db = require('../models');
 module.exports = function (app) {
     
     router.get('/', function(request, response) {
-        db.Restaurants.findAll ({
-            order: 'name',
-        }) .then (function(data) {
+        db.Restaurants.findAll({
+            where: restaurants
+        }).then (function(data) {
             var restObject = {
              restaurant: data
             };
-            response.render('main', restObject);
+            response.render('index', restObject);
     });
-})}
-
+});
+}
     

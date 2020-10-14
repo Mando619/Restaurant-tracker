@@ -18,7 +18,11 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     },
-  });
+  },
+    {
+      timestamp: false,
+    });
+  
 
   Restaurant.associate = function(models) {
     Restaurant.hasMany(models.Profiles, {
