@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-  
->>>>>>> c2db639d2086bc48e1222a7ffd2315d520c3bf26
 var path = require("path");
 
 // Routes
@@ -36,6 +32,6 @@ app.get("/profiles", function(request, response) {
 });
 
 app.get("/", function(request, response) {
-  response.sendFile(path.join(__dirname, "../public/restaurant.html"));
+  response.sendFile(path.join(__dirname, "../public/view.html"));
 });
 };
