@@ -1,11 +1,18 @@
 {
   "name": "restaurant-tracker",
   "version": "1.0.0",
-  "description": "You can review all your experiences in restaurants",
+  "description": "https://mdbootstrap.com/docs/jquery/forms/contact/#html --- form credits --- ZB",
   "main": "server.js",
   "directories": {
     "test": "tests"
   },
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "mysql2": "^1.7.0",
+    "sequelize": "^5.8.6"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -19,29 +26,5 @@
   "bugs": {
     "url": "https://github.com/Mando619/Restaurant-tracker/issues"
   },
-  "homepage": "https://github.com/Mando619/Restaurant-tracker#readme",
-  "dependencies": {
-    "express": "^4.17.1",
-    "express-handlebars": "^5.1.0",
-<<<<<<< HEAD
-    "mysql2": "^2.2.5",
-    "sequelize": "^5.8.6"
-  },
-  "devDependencies": {}
-=======
-    "handlebars": "^4.7.6",
-    "mysql": "^2.18.1",
-    "mysql2": "^1.7.0",
-    "sequelize": "^5.8.6"
-  },
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Mando619/Restaurant-tracker.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Mando619/Restaurant-tracker/issues"
-  },
   "homepage": "https://github.com/Mando619/Restaurant-tracker#readme"
->>>>>>> c2db639d2086bc48e1222a7ffd2315d520c3bf26
 }
