@@ -5,15 +5,15 @@ module.exports = function(sequelize, DataTypes) {
     var Rating = sequelize.define("Rating", 
   { 
     username: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(255),
       allowNull: false
     },
     restaurant_name: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(255),
       allowNull: false
     },
     rating: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(255),
       allowNull: false,
     },
   },

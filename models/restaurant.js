@@ -6,11 +6,11 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     },
     rating: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(255),
       allowNull: false
     },
     review: { 
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(255),
       allowNull: false
     },
   });
