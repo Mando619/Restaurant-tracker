@@ -1,22 +1,22 @@
-var mysql = require('mysql');
+//var mysql = require('mysql');
 
 
-if (process.env.JAWSDB_URL) {
+//if (process.env.JAWSDB_URL) {
     // Database is JawsDB on Heroku
-     connection = mysql.createConnection(process.env.JAWSDB_URL);
-} else {
+   //  connection = mysql.createConnection(process.env.JAWSDB_URL);
+//} else {
     // Database is local
-     connection = mysql.createConnection({
-        port: 3306,
-        host: 'localhost',
-        user: 'root',
-        password: 'arm575',
-        database: 'restaurants_db'
-    })
-};
+ //    connection = mysql.createConnection({
+    //    port: 3306,
+   //     host: 'localhost',
+  //      user: 'root',
+   //     password: 'arm575',
+   //     database: 'restaurants_db'
+  //  })
+//};
 
-connection.connect();
-module.exports = connection;
+//connection.connect();
+//module.exports = connection;
 
 
 

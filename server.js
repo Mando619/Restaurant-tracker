@@ -1,6 +1,7 @@
 var express = require('express');
 var expressHandlebars = require('express-handlebars');
 
+
 //	var cors = require('cors')
 
 var app = express();
@@ -15,6 +16,27 @@ app.use(express.json());
 
 app.engine('handlebars', expressHandlebars({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
+
+
+
+if(process.env.JAWSDB_URL){
+	var options = {
+	  host: 'y06qcehxdtkegbeb.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+	  user: 'utb9wkmamlbgl6mx',
+	  password:'s6sba1fnnchla6cd',
+	  database: 'q2cs3pwgw0axv9ok'
+	}
+  } else {
+  
+	var options = {
+	  host: 'localhost',
+	  user: 'root',
+	  password:'arm575',
+	  database: 'restaurants_db'
+	};
+  }
+
+
 
 //require('./controllers/restaurant_controller.js')(app);
 require('./routes/api-routes')(app);
