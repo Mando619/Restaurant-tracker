@@ -21,10 +21,10 @@ app.set('view engine', 'handlebars');
 
 if(process.env.JAWSDB_URL){
 	var options = {
-	  host: 'y06qcehxdtkegbeb.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
-	  user: 'utb9wkmamlbgl6mx',
-	  password:'s6sba1fnnchla6cd',
-	  database: 'q2cs3pwgw0axv9ok'
+	  host: 'tviw6wn55xwxejwj.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+	  user: 'bnizer2qz86o6f5g',
+	  password:'hrgnntt398mhd1sz',
+	  database: 'yx86lhtyqa246bjc'
 	}
   } else {
   
